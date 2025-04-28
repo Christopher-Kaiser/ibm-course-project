@@ -47,3 +47,34 @@ console.log("User Category:", userCategory);
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+// Practice task
+
+let role = "Enrolled Member";
+let authorizedAccess;
+let message;
+
+switch (role) {
+    case "Employee":
+        authorizedAccess = "Dietary Services";
+        message = "You are eligible to avail dietary services.";
+        break;
+    case "Enrolled Member":
+        authorizedAccess = "Dietary Services and one-on-one interaction with a dietician";
+        message = "You are eligible to avail dietary services and one-on-one dietician sessions.";
+        break;
+    case "Subscriber":
+        authorizedAccess = "Partial Dietary Services";
+        message = "You are eligible to partially avail dietary services.";
+        break;
+    case "Non-Subscriber":
+        authorizedAccess = "Need to enroll/subscribe";
+        message = "You will be made eligible to avail the services upon enrolling or subscribing.";
+        break;
+    default:
+        authorizedAccess = "Unknown";
+        message = "Please register a role.";
+}
+
+console.log("Authorized Access:", authorizedAccess);
+console.log("Eligibility Message:", message);
