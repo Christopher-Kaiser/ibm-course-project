@@ -27,6 +27,26 @@ function show(){
 }
 show();
     
-console.log(functionVar); // Throws ReferenceError
-console.log(functionLet); // Throws ReferenceError
-console.log(functionConst); // Throws ReferenceError
+// console.log(functionVar); // Throws ReferenceError
+// console.log(functionLet); // Throws ReferenceError
+// console.log(functionConst); // Throws ReferenceError
+
+// Additional practice
+
+{
+    var i = 2;
+    let j = 3;
+    const k = 4;
+
+    i = 16;
+    j = 14;
+    // k = 15; Throws Uncaught TypeError: Assignment to constant variable.
+}
+
+i = 12;
+j = 9;
+k = 0;
+
+console.log(i);
+console.log(j);
+console.log(k);
